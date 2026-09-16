@@ -28,8 +28,8 @@ void promptFile(vector<string> &);
 void printVec(vector<string>);
 
 /**
- * @brief randomly returns a number from 0 to 5.
- * - It is hardcoded to be from 0 to 5.
+ * @brief randomly returns base on the SIZE instead of the numbers.
+ * - It is hardcoded to be from the SIZE.
  * - Uses srand(nullptr) in main()
  * TO DO:
  * Modify it so that randGen() reads in 
@@ -38,7 +38,7 @@ void printVec(vector<string>);
  * TO DO:
  * Use <random> for modern C++ random generation instead 
  * 
- * @return int: index of question
+ * @return int: the distrib(gen)
  */
 int ranGen(size_t max_size){
     if (max_size == 0) return 0;
@@ -50,7 +50,7 @@ int ranGen(size_t max_size){
 }
 
 /**
- * @brief reads contents of filename and populates into vec
+ * @brief reads contents of file name and decides whether to accept it or not on bool.
  * 
  * @param filename :string 
  * @param vec: vector<string> &
@@ -79,8 +79,7 @@ bool readFile(string filename, vector<string> & vec) {
     return true;
 }
 /**
- * @brief writes to filename with the first column from v0, second column from v1
- * 
+ * @brief writes to filename with the first column from v0, second column from v1, now deciding whether or not to accept with using a bool function.
  * @param filename: string
  * @param v0: vector<string> (for students names)
  * @param v1: vector<string> (for questions)

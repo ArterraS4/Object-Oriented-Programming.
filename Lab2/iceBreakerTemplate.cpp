@@ -1,6 +1,7 @@
 #include<iostream>
 #include<fstream>
 /**
+ * @brief Added 4 new include for our functions to use.
  * TO DO: 
  * Add <vector>, <cstdlib>, and <ctime>​
  */
@@ -16,7 +17,7 @@ using namespace std;
  * Write their function declarations below mai()).
  * 
  * See promptFile(...) and printVec(...), which serve as examples.
- * 
+ * @brief one int, to fix the random gen, 2 bools, for the readfile and writefile to make our new functions work and including the string filename.
  */
 int ranGen(size_t max_size);
 bool readFile(string filename, vector<string> & vec);

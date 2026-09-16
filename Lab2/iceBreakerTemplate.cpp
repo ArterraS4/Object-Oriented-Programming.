@@ -4,7 +4,9 @@
  * TO DO: 
  * Add <vector>, <cstdlib>, and <ctime>​
  */
-
+#include<vector>
+#include<cstdlib>
+#include<ctime>
 using namespace std;
 
 /**

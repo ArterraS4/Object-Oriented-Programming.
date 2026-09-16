@@ -97,21 +97,23 @@ bool readFile(string filename, vector<string> & vec) {
  * -  pass by value (e.g. vector<string> v0),
  * -  pass by const reference (e.g. const vector<string> & v0),
  */
-bool writeFile(const vector<string> & v0, const vector<string> & v1){
+bool writeFile(string filename, const vector<string> & v0, const vector<string> & v1){
 
     ofstream outputFile(filename);
-     if (!outputFile) {
+    if (!outputFile) {
         cout << "Error: Could not create " << filename << endl;
-         return false;
+        return false;
     }
 
     // write under the structure:
     // Student_Name, Question_#
     for(int i = 0; i < v0.size(); i++){
-        outputFile << v0[i] << "," << v1[ranGen()] << endl;
+        outputFile << v0[i] << "," << v1[ranGen(v1.size())] << endl;
     }
     outputFile.close();
+    
     return true;
+
 }
 
 

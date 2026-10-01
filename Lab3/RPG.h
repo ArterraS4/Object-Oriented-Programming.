@@ -21,6 +21,7 @@ class RPG {
         string getName() const;
         int gethits_taken() const;
         float getluck() const;
+        float getexp() const;
         int getlevel() const;
         //COMPLETE THE REST
 
@@ -28,6 +29,7 @@ class RPG {
         string name;
         int hits_taken;
         float luck;
+        float exp;
         int level;
        
 };

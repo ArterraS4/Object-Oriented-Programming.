@@ -23,6 +23,9 @@ class RPG {
 
     private:
         string name;
+        int hits_taken;
+        float luck;
+        int level;
         //COMPLETE THE REST
 };
 #endif

@@ -23,7 +23,7 @@ class RPG {
         float getluck() const;
         float getexp() const;
         int getlevel() const;
-        //COMPLETE THE REST
+        
 
     private:
         string name;

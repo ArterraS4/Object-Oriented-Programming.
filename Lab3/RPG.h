@@ -1,6 +1,6 @@
-//RPG.H
-#ifndef RPG_H
-#define RPG_H
+//RPG.h
+#ifndef RPG_h
+#define RPG_h
 using namespace std;
 
 const int INVENTORY_SIZE = 10;

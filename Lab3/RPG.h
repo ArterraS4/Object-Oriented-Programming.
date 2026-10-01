@@ -19,6 +19,9 @@ class RPG {
 
         //accessors
         string getName() const;
+        int gethits_taken() const;
+        float getluck() const;
+        int getlevel() const;
         //COMPLETE THE REST
 
     private:
@@ -26,7 +29,7 @@ class RPG {
         int hits_taken;
         float luck;
         int level;
-        //COMPLETE THE REST
+       
 };
 #endif
 

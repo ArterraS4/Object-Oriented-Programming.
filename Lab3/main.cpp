@@ -8,15 +8,15 @@ int main() {
     RPG p2 = RPG();
 
     printf("%s Current Stats\n", p1.getName().c_str());
-    printf("Hits Taken: %i\t Luck: %f\t Exp: %f\t Level: %i\n", p1.getHitsTaken(), p1.getLuck(), p1.getExp(), p1.getLevel());
+    printf("Hits Taken: %i\t Luck: %f\t Exp: %f\t Level: %i\n", p1.getHitsTaken(), p1.getluck(), p1.getexp(), p1.getlevel());
 
     // PRINT the same for p2
     printf("%s Current Stats\n", p2.getName().c_str());
-    printf("Hits Taken: %i\t Luck: %f\t Exp: %f\t Level: %i\n", p2.getHitsTaken(), p2.getLuck(), p2.getExp(), p2.getLevel());
+    printf("Hits Taken: %i\t Luck: %f\t Exp: %f\t Level: %i\n", p2.getHitsTaken(), p2.getluck(), p2.getexp(), p2.getlevel());
 
 
     // CALL setHitsTaken(new_hit) on either p1 and p2
-    p2.setHitsTaken();
+    p2.setHitsTaken(new_hit);
 
 
     cout << "\nP2 hits taken ";

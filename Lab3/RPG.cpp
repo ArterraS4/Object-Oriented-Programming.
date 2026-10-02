@@ -1,6 +1,7 @@
 #include <string>
 #include "RPG.h"
 using namespace std;
+
 //Default constructor
 RPG::RPG() {
     name = "NPC";
@@ -9,6 +10,7 @@ RPG::RPG() {
     exp = 50.0;
     level = 1;
 }
+
 //Overloaded constructor
 RPG::RPG(string name, int hits_taken, float luck, float exp, int level) {
     this->name = name;
@@ -17,35 +19,33 @@ RPG::RPG(string name, int hits_taken, float luck, float exp, int level) {
     this->exp = exp;
     this->level = level;
 }
-//Destructor
-RPG::~RPG() {
-}
+
 //MUTATOR
 void RPG::setHitsTaken(int new_hits) {
     hits_taken = new_hits;
 }
 
 //ACCESSOR
-bool RPG::isAlive() {
+bool RPG::isAlive() const {
     return hits_taken < MAX_HITS_TAKEN;
 }
 
-string RPG::getName() {
+string RPG::getName() const {
     return name;
 }
 
-int RPG::getHitsTaken() {
+int RPG::gethits_taken() const {
     return hits_taken;
 }
 
-float RPG::getLuck() {
+float RPG::getluck() const {
     return luck;
 }
 
-float RPG::getExp() {
+float RPG::getexp() const {
     return exp;
 }
 
-int RPG::getLevel() {
+int RPG::getlevel() const {
     return level;
 }

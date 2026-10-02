@@ -26,26 +26,26 @@ void RPG::setHitsTaken(int new_hits) {
 }
 
 //ACCESSOR
-bool RPG::isAlive() const {
+bool RPG::isAlive() {
     return hits_taken < MAX_HITS_TAKEN;
 }
 
-string RPG::getName() const {
+string RPG::getName() {
     return name;
 }
 
-int RPG::getHitsTaken() const {
+int RPG::getHitsTaken() {
     return hits_taken;
 }
 
-float RPG::getLuck() const {
+float RPG::getLuck() {
     return luck;
 }
 
-float RPG::getExp() const {
+float RPG::getExp() {
     return exp;
 }
 
-int RPG::getLevel() const {
+int RPG::getLevel() {
     return level;
 }

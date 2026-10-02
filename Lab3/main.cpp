@@ -16,7 +16,7 @@ int main()
     printf("Hits Taken: %i\t Luck: %f\t Exp: %f\t Level: %i\n", p2.gethits_taken(), p2.getluck(), p2.getexp(), p2.getlevel());
 
     // CALL setHitsTaken(new_hit) on either p1 and p2
-    p2.setHitsTaken(5); 
+    p2.setHitsTaken(3); 
 
     cout << "\nP2 hits taken ";
     // PRINT out the hits_taken

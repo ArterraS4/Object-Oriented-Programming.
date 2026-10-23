@@ -31,17 +31,17 @@ class RPG {
         float luck;
         float exp;
         int level;
-/** Extended functions
+
+/** Extended functions */
 void RPG::setName(string name){
-this->name = name;
+    this->name = name;
 }
-void RPG::updateExplevel(){
-exp +=50;
-if(exp>=100){
-level = level +1;
-exp=0;
-luck += 0.1;
-}
+void RPG::updateExpLevel(){ 
+exp += 50;
+if(exp >= 100){
+level = level + 1;
+exp = 0;
+luck += 0.1;}
 }
 void RPG::attack(RPG * opponent){
 random_device rd;
@@ -49,15 +49,14 @@ mt19937 gen(rd());
 uniform_real_distribution<double> dis(0.0, 1.0);
 float random_num = dis(gen);
 bool hit = false;
-if(randnum>hit_factor * (*opponent).getLuck)){
-hit = true;
-}
+if(random_num > HIT_FACTOR * (*opponent).getLuck()){
+hit = true;}
 if(hit){
-(*opponent).setHitsTaken((*opponent).gethitsTaken + 1))}
+(*opponent).setHitsTaken((*opponent).getHitsTaken() + 1);}
 }
-void RPG::printstats()
-{
-    cout << "Name: " << name << "\tHits Taken: " << hits_taken << "\tLuck: " << fixed << setprecision(6) << luck << "\tExp: " << fixed << setprecision(6) << exp << "\tLevel: " << level << "\tStatus: " << (isAlive() ? "Alive" : "Dead") << endl;
+
+void RPG::printStats() {
+cout << "Name: " << name << "\tHits Taken: " << hits_taken << "\tLuck: " << fixed << setprecision(6) << luck << "\tExp: " << fixed << setprecision(6) << exp << "\tLevel: " << level << "\tStatus: " << (isAlive() ? "Alive" : "Dead") << endl;
 }
 RPG::~RPG()
 {

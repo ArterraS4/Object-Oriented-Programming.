@@ -1,6 +1,7 @@
 //RPG.h
 #ifndef RPG_h
 #define RPG_h
+#include <string> 
 using namespace std;
 
 const int INVENTORY_SIZE = 10;
@@ -31,6 +32,8 @@ class RPG {
         float luck;
         float exp;
         int level;
+};
+#endif
 
 /** Extended functions */
 void RPG::setName(string name){
@@ -49,10 +52,10 @@ mt19937 gen(rd());
 uniform_real_distribution<double> dis(0.0, 1.0);
 float random_num = dis(gen);
 bool hit = false;
-if(random_num > HIT_FACTOR * (*opponent).getLuck()){
+if(random_num > HIT_FACTOR * (*opponent).getluck()){
 hit = true;}
 if(hit){
-(*opponent).setHitsTaken((*opponent).getHitsTaken() + 1);}
+(*opponent).setHitsTaken((*opponent).gethits_taken() + 1);}
 }
 
 void RPG::printStats() {
@@ -61,6 +64,5 @@ cout << "Name: " << name << "\tHits Taken: " << hits_taken << "\tLuck: " << fixe
 RPG::~RPG()
 {
 }
-};
-#endif
+
 

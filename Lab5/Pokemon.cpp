@@ -22,7 +22,7 @@ Pokemon::Pokemon(){
  * @param def 
  * @param type 
  */
-Pokemon::Pokemon(string name, int hp, int att, int def, vector<string> type){
+Pokemon::Pokemon(const string& name, int hp, int att, int def, const vector<string>& type){
     this->name = name;
     this->hp = hp;
     this->attack = att; 
@@ -39,7 +39,7 @@ void Pokemon::speak(){
     cout << "...\n";
 }
 
-void Pokemon::printStats(){
+void Pokemon::printStats()const {
     printf("Name:%s\t HP: %i\t DEF: %i\t ATT: %i\n", name.c_str(), hp, defense, attack);
     cout << "Type: ";
     for(int i = 0; i < type.size(); i++){

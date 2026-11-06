@@ -30,7 +30,7 @@ Charmander::Charmander() : Pokemon() {
  * @param t 
  * @param s 
  */
-Charmander::Charmander(string name, int hp, int att, int def, vector<string> t, vector<string> s) : 
+Charmander::Charmander(const string& name, int hp, int att, int def, const vector<string>& t, const vector<string>& s) : 
     Pokemon(name, hp, att, def, t) {
     skills = s;
     cout << "Overloaded Constructor (Charmander)\n";
@@ -48,7 +48,7 @@ void Charmander::speak(){
  * @brief calls printStats from the parent class (Pokemon) and appends the skills used for Charmander
  * 
  */
-void Charmander::printStats(){
+void Charmander::printStats() const {
     Pokemon::printStats(); // Reuses parent layout beautifully
     cout << "Skills: ";
     for(int i = 0; i < skills.size(); i++){

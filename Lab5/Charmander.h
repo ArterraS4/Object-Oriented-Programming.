@@ -17,7 +17,7 @@ public:
     // ------------------ Mutator Functions ------------------
 
     void speak() override;
-    void printStats() override;
+    void printStats() const  override;
 
 private:
     vector<string> skills;
